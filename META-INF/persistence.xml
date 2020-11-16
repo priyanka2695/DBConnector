@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_1.xsd"
+        version="2.1" xmlns="http://java.sun.com/xml/ns/persistence">
+        <persistence-unit name="databaseconnector" transaction-type="RESOURCE_LOCAL">
+                <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+                <non-jta-data-source>mydatasource</non-jta-data-source>
+                <jta-data-source>mydatasource</jta-data-source>
+                <class>identity.dbconnector.domain.UserProfile</class>
+                <properties>
+                        <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+                </properties>
+        </persistence-unit>
+</persistence>
